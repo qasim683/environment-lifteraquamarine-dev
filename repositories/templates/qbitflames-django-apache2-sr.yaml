@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: qbitflames
+    provider: github
+    repository: django_apache2
+  name: qbitflames-django-apache2
+spec:
+  description: Imported application for qbitflames/django_apache2
+  httpCloneURL: https://github.com/qbitflames/django_apache2.git
+  org: qbitflames
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: django_apache2
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/qbitflames/django_apache2.git

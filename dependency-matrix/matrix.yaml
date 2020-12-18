@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: qbitflames
+  repo: django_apache2
+  url: https://github.com/qbitflames/django_apache2.git
+  version: ""
+  versionURL: ""
