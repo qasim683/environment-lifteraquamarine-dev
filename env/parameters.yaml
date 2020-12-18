@@ -1,0 +1,10 @@
+adminUser:
+  password: local:lifteraquamarine/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: qasimaziz37@gmail.com
+  token: local:lifteraquamarine/pipelineUser:token
+  username: qasim683
+prow:
+  hmacToken: local:lifteraquamarine/prow:hmacToken

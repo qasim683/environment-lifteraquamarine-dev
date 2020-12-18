@@ -1,25 +1,67 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-config
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: false
-  project: ""
+  clusterName: lifteraquamarine
+  devEnvApprovers:
+  - qasim-aziz
+  environmentGitOwner: qasim-aziz
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: telco-team
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  zone: us-east1-b
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: 34.73.84.2.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-lifteraquamarine-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-lifteraquamarine-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-lifteraquamarine-production
+gitops: true
 ingress:
-  domain: ""
+  domain: 34.73.84.2.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: false
     url: ""
@@ -29,7 +71,11 @@ storage:
   repository:
     enabled: false
     url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: "master"
+  ref: v1.0.608
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: lighthouse
